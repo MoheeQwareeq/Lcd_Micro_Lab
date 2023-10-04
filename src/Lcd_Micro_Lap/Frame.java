@@ -10,6 +10,7 @@ public class Frame extends javax.swing.JFrame {
 
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setTitle("Lcd Micro Lap");
         for (int i = 0; i < 56; i++) {
             count[i] = 0;
 
