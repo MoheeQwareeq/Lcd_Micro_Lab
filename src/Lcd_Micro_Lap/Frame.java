@@ -1819,11 +1819,14 @@ public class Frame extends javax.swing.JFrame {
 
     public static String byteArrayToHex(byte[] a) {
         StringBuilder sb = new StringBuilder(a.length * 2);
+        int index = 0;
         for (byte b : a) {
             b = (byte) ((b & 0xF0) >> 4 | (b & 0x0F) << 4);
             b = (byte) (char) ((b & 0xCC) >> 2 | (b & 0x33) << 2);
             b = (byte) (char) ((b & 0xAA) >> 1 | (b & 0x55) << 1);
-            sb.append(String.format("%02xh, ", b));
+           if (index == a.length - 1) sb.append(String.format("%02xh ", b));
+           else sb.append(String.format("%02xh , ", b));
+           index++;
         }
         return sb.toString();
     }
