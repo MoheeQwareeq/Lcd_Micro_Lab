@@ -7,6 +7,5 @@ Each character segment on the LCD Micro Lab is composed of 56 pixels arranged in
 
 
 
-<img width="505" alt="Screen Shot 2023-10-04 at 8 54 36 PM" src="https://github.com/MoheeQwareeq/Lcd_Micro_Lab/assets/143301303/e2bdaa14-b205-4f47-a911-cee56440f74e">
 
-
+<img width="510" alt="Screen Shot 2023-10-06 at 7 01 41 AM" src="https://github.com/MoheeQwareeq/Lcd_Micro_Lab/assets/143301303/a19cafe1-dd41-4d6e-b611-8c5f3c73431a">
