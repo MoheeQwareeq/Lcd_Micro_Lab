@@ -1,6 +1,6 @@
 # Lcd_Micro_Lab
 
-The LCD Micro Lab is a tool designed for educational purposes,  It demonstrates how to manipulate a 2D character array to represent characters on the LCD screen.
+The LCD Micro Lab is a tool designed for educational purposes,  It demonstrates how to manipulate a 2D array to represent characters on the LCD screen.
 
 Character Segment
 Each character segment on the LCD Micro Lab is composed of 56 pixels arranged in a 7x8 matrix. These pixels can be individually controlled to display alphanumeric characters and custom symbols.
