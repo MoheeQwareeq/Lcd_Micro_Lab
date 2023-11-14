@@ -4,18 +4,19 @@ import java.awt.Color;
 
 public class Frame extends javax.swing.JFrame {
 
-    private int[] count = new int[56];
+    private final Color DEFULT_COLOR = new Color(51, 153, 255);
+    private final Color FLAGE_COLOR = Color.red;
+    private int[] count;
 
     public Frame() {
 
         initComponents();
         this.setLocationRelativeTo(null);
         this.setTitle("Lcd Micro Lap");
+        count=new int[56];
         for (int i = 0; i < 56; i++) {
             count[i] = 0;
-
         }
-
     }
 
     @SuppressWarnings("unchecked")
@@ -1226,594 +1227,257 @@ public class Frame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void p1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p1MousePressed
-        if (count[0] == 0) {
-            p1.setBackground(Color.red);
-            count[0] = 1;
+    private void handleMousePressed(javax.swing.JPanel panel, int index) {
+        if (count[index] == 0) {
+            panel.setBackground(FLAGE_COLOR);
+            count[index] = 1;
         } else {
-            p1.setBackground(new Color(51, 153, 255));
-            count[0] = 0;
+            panel.setBackground(DEFULT_COLOR);
+            count[index] = 0;
         }
+    }
 
+    private void p1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p1MousePressed
+        handleMousePressed(p1, 0);
     }//GEN-LAST:event_p1MousePressed
 
     private void p2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p2MousePressed
-        if (count[1] == 0) {
-            p2.setBackground(Color.red);
-            count[1] = 1;
-        } else {
-            p2.setBackground(new Color(51, 153, 255));
-            count[1] = 0;
-        }
+        handleMousePressed(p2, 1);
     }//GEN-LAST:event_p2MousePressed
 
     private void p3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p3MousePressed
-        if (count[2] == 0) {
-            p3.setBackground(Color.red);
-            count[2] = 1;
-        } else {
-            p3.setBackground(new Color(51, 153, 255));
-            count[2] = 0;
-        }
+        handleMousePressed(p3, 2);
     }//GEN-LAST:event_p3MousePressed
 
     private void p4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p4MousePressed
-        if (count[3] == 0) {
-            p4.setBackground(Color.red);
-            count[3] = 1;
-        } else {
-            p4.setBackground(new Color(51, 153, 255));
-            count[3] = 0;
-        }
+        handleMousePressed(p4, 3);
     }//GEN-LAST:event_p4MousePressed
 
     private void p5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p5MousePressed
-        if (count[4] == 0) {
-            p5.setBackground(Color.red);
-            count[4] = 1;
-        } else {
-            p5.setBackground(new Color(51, 153, 255));
-            count[4] = 0;
-        }
+        handleMousePressed(p5, 4);
     }//GEN-LAST:event_p5MousePressed
 
     private void p6MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p6MousePressed
-        if (count[5] == 0) {
-            p6.setBackground(Color.red);
-            count[5] = 1;
-        } else {
-            p6.setBackground(new Color(51, 153, 255));
-            count[5] = 0;
-        }
+        handleMousePressed(p6, 5);
     }//GEN-LAST:event_p6MousePressed
 
     private void p7MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p7MousePressed
-        if (count[6] == 0) {
-            p7.setBackground(Color.red);
-            count[6] = 1;
-        } else {
-            p7.setBackground(new Color(51, 153, 255));
-            count[6] = 0;
-        }
+        handleMousePressed(p7, 6);
     }//GEN-LAST:event_p7MousePressed
 
     private void p8MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p8MousePressed
-        if (count[7] == 0) {
-            p8.setBackground(Color.red);
-            count[7] = 1;
-        } else {
-            p8.setBackground(new Color(51, 153, 255));
-            count[7] = 0;
-        }
-
+        handleMousePressed(p8, 7);
     }//GEN-LAST:event_p8MousePressed
+    private void p9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p9MouseClicked
+        handleMousePressed(p9, 8);
+    }//GEN-LAST:event_p9MouseClicked
 
     private void p10MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p10MousePressed
-        if (count[9] == 0) {
-            p10.setBackground(Color.red);
-            count[9] = 1;
-        } else {
-            p10.setBackground(new Color(51, 153, 255));
-            count[9] = 0;
-        }
+        handleMousePressed(p10, 9);
     }//GEN-LAST:event_p10MousePressed
 
     private void p11MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p11MousePressed
-        if (count[10] == 0) {
-            p11.setBackground(Color.red);
-            count[10] = 1;
-        } else {
-            p11.setBackground(new Color(51, 153, 255));
-            count[10] = 0;
-        }
+        handleMousePressed(p11, 10);
     }//GEN-LAST:event_p11MousePressed
 
     private void p12MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p12MousePressed
-        if (count[11] == 0) {
-            p12.setBackground(Color.red);
-            count[11] = 1;
-        } else {
-            p12.setBackground(new Color(51, 153, 255));
-            count[11] = 0;
-        }
+        handleMousePressed(p12, 11);
     }//GEN-LAST:event_p12MousePressed
 
     private void p13MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p13MousePressed
-        if (count[12] == 0) {
-            p13.setBackground(Color.red);
-            count[12] = 1;
-        } else {
-            p13.setBackground(new Color(51, 153, 255));
-            count[12] = 0;
-        }
+        handleMousePressed(p13, 12);
     }//GEN-LAST:event_p13MousePressed
 
     private void p14MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p14MousePressed
-        if (count[13] == 0) {
-            p14.setBackground(Color.red);
-            count[13] = 1;
-        } else {
-            p14.setBackground(new Color(51, 153, 255));
-            count[13] = 0;
-        }
+        handleMousePressed(p14, 13);
     }//GEN-LAST:event_p14MousePressed
 
     private void p15MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p15MousePressed
-        if (count[14] == 0) {
-            p15.setBackground(Color.red);
-            count[14] = 1;
-        } else {
-            p15.setBackground(new Color(51, 153, 255));
-            count[14] = 0;
-        }
+        handleMousePressed(p15, 14);
     }//GEN-LAST:event_p15MousePressed
 
     private void p16MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p16MousePressed
-        if (count[15] == 0) {
-            p16.setBackground(Color.red);
-            count[15] = 1;
-        } else {
-            p16.setBackground(new Color(51, 153, 255));
-            count[15] = 0;
-        }
+        handleMousePressed(p16, 15);
     }//GEN-LAST:event_p16MousePressed
 
-    private void p9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p9MouseClicked
-        if (count[8] == 0) {
-            p9.setBackground(Color.red);
-            count[8] = 1;
-        } else {
-            p9.setBackground(new Color(51, 153, 255));
-            count[8] = 0;
-        }
-    }//GEN-LAST:event_p9MouseClicked
-
     private void p17MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p17MousePressed
-        if (count[16] == 0) {
-            p17.setBackground(Color.red);
-            count[16] = 1;
-        } else {
-            p17.setBackground(new Color(51, 153, 255));
-            count[16] = 0;
-        }
+        handleMousePressed(p17, 16);
     }//GEN-LAST:event_p17MousePressed
 
     private void p18MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p18MousePressed
-        if (count[17] == 0) {
-            p18.setBackground(Color.red);
-            count[17] = 1;
-        } else {
-            p18.setBackground(new Color(51, 153, 255));
-            count[17] = 0;
-        }
+        handleMousePressed(p18, 17);
     }//GEN-LAST:event_p18MousePressed
+   private void p19MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p19MousePressed
+       handleMousePressed(p19, 18);
+    }//GEN-LAST:event_p19MousePressed
 
     private void p20MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p20MousePressed
-        if (count[19] == 0) {
-            p20.setBackground(Color.red);
-            count[19] = 1;
-        } else {
-            p20.setBackground(new Color(51, 153, 255));
-            count[19] = 0;
-        }
+        handleMousePressed(p20, 19);
     }//GEN-LAST:event_p20MousePressed
 
     private void p21MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p21MousePressed
-        if (count[20] == 0) {
-            p21.setBackground(Color.red);
-            count[20] = 1;
-        } else {
-            p21.setBackground(new Color(51, 153, 255));
-            count[20] = 0;
-        }
+        handleMousePressed(p21, 20);
     }//GEN-LAST:event_p21MousePressed
 
     private void p22MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p22MousePressed
-        if (count[21] == 0) {
-            p22.setBackground(Color.red);
-            count[21] = 1;
-        } else {
-            p22.setBackground(new Color(51, 153, 255));
-            count[21] = 0;
-        }
+        handleMousePressed(p22, 21);
     }//GEN-LAST:event_p22MousePressed
 
     private void p23MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p23MousePressed
-        if (count[22] == 0) {
-            p23.setBackground(Color.red);
-            count[22] = 1;
-        } else {
-            p23.setBackground(new Color(51, 153, 255));
-            count[22] = 0;
-        }
+        handleMousePressed(p23, 22);
     }//GEN-LAST:event_p23MousePressed
 
     private void p24MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p24MousePressed
-        if (count[23] == 0) {
-            p24.setBackground(Color.red);
-            count[23] = 1;
-        } else {
-            p24.setBackground(new Color(51, 153, 255));
-            count[23] = 0;
-        }
+        handleMousePressed(p24, 23);
     }//GEN-LAST:event_p24MousePressed
 
-    private void p19MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p19MousePressed
-        if (count[18] == 0) {
-            p19.setBackground(Color.red);
-            count[18] = 1;
-        } else {
-            p19.setBackground(new Color(51, 153, 255));
-            count[18] = 0;
-        }
-    }//GEN-LAST:event_p19MousePressed
-
     private void p25MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p25MousePressed
-        if (count[24] == 0) {
-            p25.setBackground(Color.red);
-            count[24] = 1;
-        } else {
-            p25.setBackground(new Color(51, 153, 255));
-            count[24] = 0;
-        }
+        handleMousePressed(p25, 24);
     }//GEN-LAST:event_p25MousePressed
 
     private void p26MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p26MousePressed
-        if (count[25] == 0) {
-            p26.setBackground(Color.red);
-            count[25] = 1;
-        } else {
-            p26.setBackground(new Color(51, 153, 255));
-            count[25] = 0;
-        }
+        handleMousePressed(p26, 25);
     }//GEN-LAST:event_p26MousePressed
 
     private void p27MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p27MousePressed
-        if (count[26] == 0) {
-            p27.setBackground(Color.red);
-            count[26] = 1;
-        } else {
-            p27.setBackground(new Color(51, 153, 255));
-            count[26] = 0;
-        }
+        handleMousePressed(p27, 26);
     }//GEN-LAST:event_p27MousePressed
 
     private void p28MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p28MousePressed
-        if (count[27] == 0) {
-            p28.setBackground(Color.red);
-            count[27] = 1;
-        } else {
-            p28.setBackground(new Color(51, 153, 255));
-            count[27] = 0;
-        }
+        handleMousePressed(p28, 27);
     }//GEN-LAST:event_p28MousePressed
 
     private void p29MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p29MousePressed
-        if (count[28] == 0) {
-            p29.setBackground(Color.red);
-            count[28] = 1;
-        } else {
-            p29.setBackground(new Color(51, 153, 255));
-            count[28] = 0;
-        }
+        handleMousePressed(p29, 28);
     }//GEN-LAST:event_p29MousePressed
 
     private void p30MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p30MousePressed
-        if (count[29] == 0) {
-            p30.setBackground(Color.red);
-            count[29] = 1;
-        } else {
-            p30.setBackground(new Color(51, 153, 255));
-            count[29] = 0;
-        }
+        handleMousePressed(p30, 29);
     }//GEN-LAST:event_p30MousePressed
 
     private void p31MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p31MousePressed
-        if (count[30] == 0) {
-            p31.setBackground(Color.red);
-            count[30] = 1;
-        } else {
-            p31.setBackground(new Color(51, 153, 255));
-            count[30] = 0;
-        }
+        handleMousePressed(p31, 30);
     }//GEN-LAST:event_p31MousePressed
 
     private void p32MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p32MousePressed
-        if (count[31] == 0) {
-            p32.setBackground(Color.red);
-            count[31] = 1;
-        } else {
-            p32.setBackground(new Color(51, 153, 255));
-            count[31] = 0;
-        }
+        handleMousePressed(p32, 31);
     }//GEN-LAST:event_p32MousePressed
 
     private void p33MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p33MousePressed
-        if (count[32] == 0) {
-            p33.setBackground(Color.red);
-            count[32] = 1;
-        } else {
-            p33.setBackground(new Color(51, 153, 255));
-            count[32] = 0;
-        }
+        handleMousePressed(p33, 32);
     }//GEN-LAST:event_p33MousePressed
 
     private void p34MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p34MousePressed
-        if (count[33] == 0) {
-            p34.setBackground(Color.red);
-            count[33] = 1;
-        } else {
-            p34.setBackground(new Color(51, 153, 255));
-            count[33] = 0;
-        }
+        handleMousePressed(p34, 33);
     }//GEN-LAST:event_p34MousePressed
 
     private void p35MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p35MousePressed
-        if (count[34] == 0) {
-            p35.setBackground(Color.red);
-            count[34] = 1;
-        } else {
-            p35.setBackground(new Color(51, 153, 255));
-            count[34] = 0;
-        }
+        handleMousePressed(p35, 34);
     }//GEN-LAST:event_p35MousePressed
 
     private void p36MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p36MousePressed
-        if (count[35] == 0) {
-            p36.setBackground(Color.red);
-            count[35] = 1;
-        } else {
-            p36.setBackground(new Color(51, 153, 255));
-            count[35] = 0;
-        }
+        handleMousePressed(p36, 35);
     }//GEN-LAST:event_p36MousePressed
 
     private void p37MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p37MousePressed
-        if (count[36] == 0) {
-            p37.setBackground(Color.red);
-            count[36] = 1;
-        } else {
-            p37.setBackground(new Color(51, 153, 255));
-            count[36] = 0;
-        }
+        handleMousePressed(p37, 36);
     }//GEN-LAST:event_p37MousePressed
 
     private void p38MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p38MousePressed
-        if (count[37] == 0) {
-            p38.setBackground(Color.red);
-            count[37] = 1;
-        } else {
-            p38.setBackground(new Color(51, 153, 255));
-            count[37] = 0;
-        }
+        handleMousePressed(p38, 37);
     }//GEN-LAST:event_p38MousePressed
 
     private void p39MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p39MousePressed
-        if (count[38] == 0) {
-            p39.setBackground(Color.red);
-            count[38] = 1;
-        } else {
-            p39.setBackground(new Color(51, 153, 255));
-            count[38] = 0;
-        }
+        handleMousePressed(p39, 38);
     }//GEN-LAST:event_p39MousePressed
 
     private void p40MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p40MousePressed
-        if (count[39] == 0) {
-            p40.setBackground(Color.red);
-            count[39] = 1;
-        } else {
-            p40.setBackground(new Color(51, 153, 255));
-            count[39] = 0;
-        }
+        handleMousePressed(p40, 39);
     }//GEN-LAST:event_p40MousePressed
 
     private void p41MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p41MousePressed
-        if (count[40] == 0) {
-            p41.setBackground(Color.red);
-            count[40] = 1;
-        } else {
-            p41.setBackground(new Color(51, 153, 255));
-            count[40] = 0;
-        }
+        handleMousePressed(p41, 40);
     }//GEN-LAST:event_p41MousePressed
 
     private void p42MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p42MousePressed
-        if (count[41] == 0) {
-            p42.setBackground(Color.red);
-            count[41] = 1;
-        } else {
-            p42.setBackground(new Color(51, 153, 255));
-            count[41] = 0;
-        }
+        handleMousePressed(p42, 41);
     }//GEN-LAST:event_p42MousePressed
 
     private void p43MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p43MousePressed
-        if (count[42] == 0) {
-            p43.setBackground(Color.red);
-            count[42] = 1;
-        } else {
-            p43.setBackground(new Color(51, 153, 255));
-            count[42] = 0;
-        }
+        handleMousePressed(p43, 42);
     }//GEN-LAST:event_p43MousePressed
 
     private void p44MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p44MousePressed
-        if (count[43] == 0) {
-            p44.setBackground(Color.red);
-            count[43] = 1;
-        } else {
-            p44.setBackground(new Color(51, 153, 255));
-            count[43] = 0;
-        }
+        handleMousePressed(p44, 43);
     }//GEN-LAST:event_p44MousePressed
 
     private void p45MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p45MousePressed
-        if (count[44] == 0) {
-            p45.setBackground(Color.red);
-            count[44] = 1;
-        } else {
-            p45.setBackground(new Color(51, 153, 255));
-            count[44] = 0;
-        }
+        handleMousePressed(p45, 44);
     }//GEN-LAST:event_p45MousePressed
 
     private void p46MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p46MousePressed
-        if (count[45] == 0) {
-            p46.setBackground(Color.red);
-            count[45] = 1;
-        } else {
-            p46.setBackground(new Color(51, 153, 255));
-            count[45] = 0;
-        }
+        handleMousePressed(p46, 45);
     }//GEN-LAST:event_p46MousePressed
 
     private void p47MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p47MousePressed
-        if (count[46] == 0) {
-            p47.setBackground(Color.red);
-            count[46] = 1;
-        } else {
-            p47.setBackground(new Color(51, 153, 255));
-            count[46] = 0;
-        }
+        handleMousePressed(p47, 46);
     }//GEN-LAST:event_p47MousePressed
 
     private void p48MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p48MousePressed
-        if (count[47] == 0) {
-            p48.setBackground(Color.red);
-            count[47] = 1;
-        } else {
-            p48.setBackground(new Color(51, 153, 255));
-            count[47] = 0;
-        }
+        handleMousePressed(p48, 47);
     }//GEN-LAST:event_p48MousePressed
 
     private void p49MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p49MousePressed
-        if (count[48] == 0) {
-            p49.setBackground(Color.red);
-            count[48] = 1;
-        } else {
-            p49.setBackground(new Color(51, 153, 255));
-            count[48] = 0;
-        }
+        handleMousePressed(p49, 48);
     }//GEN-LAST:event_p49MousePressed
 
     private void p50MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p50MousePressed
-        if (count[49] == 0) {
-            p50.setBackground(Color.red);
-            count[49] = 1;
-        } else {
-            p50.setBackground(new Color(51, 153, 255));
-            count[49] = 0;
-        }
+        handleMousePressed(p50, 49);
     }//GEN-LAST:event_p50MousePressed
 
     private void p51MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p51MousePressed
-        if (count[50] == 0) {
-            p51.setBackground(Color.red);
-            count[50] = 1;
-        } else {
-            p51.setBackground(new Color(51, 153, 255));
-            count[50] = 0;
-        }
+        handleMousePressed(p51, 50);
     }//GEN-LAST:event_p51MousePressed
 
     private void p52MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p52MousePressed
-        if (count[51] == 0) {
-            p52.setBackground(Color.red);
-            count[51] = 1;
-        } else {
-            p52.setBackground(new Color(51, 153, 255));
-            count[51] = 0;
-        }
+        handleMousePressed(p52, 51);
     }//GEN-LAST:event_p52MousePressed
 
     private void p53MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p53MousePressed
-        if (count[52] == 0) {
-            p53.setBackground(Color.red);
-            count[52] = 1;
-        } else {
-            p53.setBackground(new Color(51, 153, 255));
-            count[52] = 0;
-        }
+        handleMousePressed(p53, 52);
     }//GEN-LAST:event_p53MousePressed
 
     private void p54MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p54MousePressed
-        if (count[53] == 0) {
-            p54.setBackground(Color.red);
-            count[53] = 1;
-        } else {
-            p54.setBackground(new Color(51, 153, 255));
-            count[53] = 0;
-        }
+        handleMousePressed(p54, 53);
     }//GEN-LAST:event_p54MousePressed
+    private void p55MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p55MousePressed
+        handleMousePressed(p55, 54);
+    }//GEN-LAST:event_p55MousePressed
 
     private void p56MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p56MousePressed
-        if (count[55] == 0) {
-            p56.setBackground(Color.red);
-            count[55] = 1;
-        } else {
-            p56.setBackground(new Color(51, 153, 255));
-            count[55] = 0;
-        }
+        handleMousePressed(p56, 55);
     }//GEN-LAST:event_p56MousePressed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         boolean[] temp = new boolean[56];
-
         for (int i = 0; i < 56; i++) {
-            if (count[i] == 1) {
+            if (count[i] == 1) 
                 temp[i] = true;
-            } else {
+             else 
                 temp[i] = false;
-            }
         }
-
         byte[] mycharArray = toBytes(temp);
-
         jTextField1.setText(byteArrayToHex(mycharArray));
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void p55MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_p55MousePressed
-        if (count[54] == 0) {
-            p55.setBackground(Color.red);
-            count[54] = 1;
-        } else {
-            p55.setBackground(new Color(51, 153, 255));
-            count[54] = 0;
-        }
-    }//GEN-LAST:event_p55MousePressed
 
     public byte[] toBytes(boolean[] input) {
         byte[] toReturn = new byte[input.length / 8];
         for (int entry = 0; entry < toReturn.length; entry++) {
             for (int bit = 0; bit < 8; bit++) {
-                if (input[entry * 8 + bit]) {
+                if (input[entry * 8 + bit]) 
                     toReturn[entry] |= (128 >> bit);
-                }
             }
         }
-
         return toReturn;
     }
 
@@ -1824,18 +1488,14 @@ public class Frame extends javax.swing.JFrame {
             b = (byte) ((b & 0xF0) >> 4 | (b & 0x0F) << 4);
             b = (byte) (char) ((b & 0xCC) >> 2 | (b & 0x33) << 2);
             b = (byte) (char) ((b & 0xAA) >> 1 | (b & 0x55) << 1);
-           if (index == a.length - 1) sb.append(String.format("%02xh ", b));
-           else sb.append(String.format("%02xh , ", b));
-           index++;
+            if (index == a.length - 1) 
+                sb.append(String.format("%02xh ", b));
+             else 
+                sb.append(String.format("%02xh , ", b));
+            index++;
         }
         return sb.toString();
     }
-
-    public char reverse(char b) {
-
-        return b;
-    }
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
