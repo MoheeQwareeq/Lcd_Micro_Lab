@@ -9,7 +9,7 @@ public class Frame extends javax.swing.JFrame {
     private final Color FLAGE_COLOR = Color.red;
     private int[] count;
 
-    private Frame() {
+    public Frame() {
         initComponents();
         setCursor(new Cursor(Cursor.HAND_CURSOR));
         setLocationRelativeTo(null);
