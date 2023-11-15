@@ -1,6 +1,7 @@
 package Lcd_Micro_Lap;
 
 import java.awt.Color;
+import java.awt.Cursor;
 
 public class Frame extends javax.swing.JFrame {
 
@@ -9,14 +10,11 @@ public class Frame extends javax.swing.JFrame {
     private int[] count;
 
     public Frame() {
-
         initComponents();
-        this.setLocationRelativeTo(null);
-        this.setTitle("Lcd Micro Lap");
+        setCursor(new Cursor(Cursor.HAND_CURSOR));
+        setLocationRelativeTo(null);
+        setTitle("Lcd Micro Lap");
         count=new int[56];
-        for (int i = 0; i < 56; i++) {
-            count[i] = 0;
-        }
     }
 
     @SuppressWarnings("unchecked")
@@ -80,10 +78,11 @@ public class Frame extends javax.swing.JFrame {
         p48 = new javax.swing.JPanel();
         p56 = new javax.swing.JPanel();
         p40 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        output = new javax.swing.JTextField();
+        getArray = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(51, 51, 51));
@@ -1209,18 +1208,18 @@ public class Frame extends javax.swing.JFrame {
 
         jPanel2.add(p40, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 500, 60, 60));
 
-        jTextField1.setEditable(false);
-        jTextField1.setFont(new java.awt.Font("American Typewriter", 3, 14)); // NOI18N
-        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 570, 320, 50));
+        output.setEditable(false);
+        output.setFont(new java.awt.Font("American Typewriter", 3, 14)); // NOI18N
+        jPanel2.add(output, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 570, 320, 50));
 
-        jButton1.setFont(new java.awt.Font("American Typewriter", 3, 14)); // NOI18N
-        jButton1.setText("Get Array");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        getArray.setFont(new java.awt.Font("American Typewriter", 3, 14)); // NOI18N
+        getArray.setText("Get Array");
+        getArray.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                getArrayActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 580, -1, -1));
+        jPanel2.add(getArray, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 580, -1, -1));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 630));
 
@@ -1458,7 +1457,7 @@ public class Frame extends javax.swing.JFrame {
         handleMousePressed(p56, 55);
     }//GEN-LAST:event_p56MousePressed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void getArrayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_getArrayActionPerformed
         boolean[] temp = new boolean[56];
         for (int i = 0; i < 56; i++) {
             if (count[i] == 1) 
@@ -1467,8 +1466,8 @@ public class Frame extends javax.swing.JFrame {
                 temp[i] = false;
         }
         byte[] mycharArray = toBytes(temp);
-        jTextField1.setText(byteArrayToHex(mycharArray));
-    }//GEN-LAST:event_jButton1ActionPerformed
+        output.setText(byteArrayToHex(mycharArray));
+    }//GEN-LAST:event_getArrayActionPerformed
 
     public byte[] toBytes(boolean[] input) {
         byte[] toReturn = new byte[input.length / 8];
@@ -1498,9 +1497,9 @@ public class Frame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton getArray;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField output;
     private javax.swing.JPanel p1;
     private javax.swing.JPanel p10;
     private javax.swing.JPanel p11;
