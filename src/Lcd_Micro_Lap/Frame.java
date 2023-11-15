@@ -9,7 +9,7 @@ public class Frame extends javax.swing.JFrame {
     private final Color FLAGE_COLOR = Color.red;
     private int[] count;
 
-    public Frame() {
+    private Frame() {
         initComponents();
         setCursor(new Cursor(Cursor.HAND_CURSOR));
         setLocationRelativeTo(null);
@@ -1469,7 +1469,7 @@ public class Frame extends javax.swing.JFrame {
         output.setText(byteArrayToHex(mycharArray));
     }//GEN-LAST:event_getArrayActionPerformed
 
-    public byte[] toBytes(boolean[] input) {
+    private byte[] toBytes(boolean[] input) {
         byte[] toReturn = new byte[input.length / 8];
         for (int entry = 0; entry < toReturn.length; entry++) {
             for (int bit = 0; bit < 8; bit++) {
@@ -1480,7 +1480,7 @@ public class Frame extends javax.swing.JFrame {
         return toReturn;
     }
 
-    public static String byteArrayToHex(byte[] a) {
+    private String byteArrayToHex(byte[] a) {
         StringBuilder sb = new StringBuilder(a.length * 2);
         int index = 0;
         for (byte b : a) {
